@@ -1,0 +1,101 @@
+main, header,nav, article footer{
+    border:1px solid gray;
+    padding: 0px;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    grid-area: h;
+    color: rgb(14, 133, 14);
+}
+article{
+    grid-area: a;
+    padding: auto;
+    padding: 10px;
+}
+.kontener{
+    display:grid;
+    grid-template-columns: 1fr 1fr ;
+    margin: auto;
+    grid-gap: 4px;
+}
+nav{
+    grid-area: n;
+    background-color:rgb(14, 133, 14) ;
+}
+nav ul{
+    list-style-type: none;
+    list-style: none;
+}
+ol li{
+    padding: 7px;
+    text-align: justify;
+}
+ nav li a{
+    text-decoration: none;
+    padding: 5px;
+    color:rgb(4, 61, 4) ;
+}
+aside{
+    grid-area: as;
+    padding: 2px;
+}
+footer{
+    grid-area: f;
+    text-align: center;
+    color:rgb(14, 133, 14) ;
+}
+img{
+    width: 100%;
+    border: 1px solid black;
+    padding: 3px;
+}
+.karl{
+    border: 1px solid gray;
+    padding: 2px;
+}
+.henry{
+    border: 1px solid gray;
+    padding: 2px;
+}
+h2{
+     color: rgb(14, 133, 14);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+.elso{
+    border-bottom: 2px solid #010405;
+}
+tr:nth-child(odd) {
+    background-color: #a6bcc2;
+}
+main{
+    margin: auto;
+    max-width: 1000px;
+        display: grid;
+        grid-template-columns:  1fr 1fr 1fr;
+        grid-template-areas:    "h h h "
+                                "n n n "
+                                "a a as"
+                                "f f f ";
+}
+@media screen and (max-width:700px){
+    main{
+        grid-template-columns: auto auto auto;
+        grid-template-areas:    "h"
+                                "n"
+                                "a"
+                                "as"
+                                "f";
+    }
+    article{
+        grid-template-columns: 1fr;
+    }
+}
